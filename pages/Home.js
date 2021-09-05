@@ -138,6 +138,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
+      <StatusBar backgroundColor={colorclaro} />
       <View style={styles.container}>
         <Header></Header>
         <LinearGradient
