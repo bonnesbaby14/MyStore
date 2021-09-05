@@ -13,8 +13,13 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
+
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
+  const colorFondo = '#1A1F2B';
+  const colorBTN = '#1f2844';
+
+  const colorStatus = '#7226dd';
 
   const styles = StyleSheet.create({
     container: {
@@ -24,16 +29,44 @@ const NewSale = ({navigation}) => {
     topbar: {
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-around',
+      justifyContent: 'flex-start',
     },
     back: {
-      alignItems: 'flex-start',
+      alignItems: 'center',
+      marginLeft: 10,
+    },
+    datos: {
+      flex: 10,
+      backgroundColor: colorFondo,
+      borderTopLeftRadius: 50,
+      borderTopRightRadius: 50,
+      flexDirection: 'column',
+    },
+    botones: {
+      margin: 20,
+      marginBottom: 0,
+      flexDirection: 'row',
+    },
+    botones2: {
+      margin: 20,
+      marginTop: 0,
+      flexDirection: 'row',
+    },
+    boton: {
+      backgroundColor: colorBTN,
+      borderRadius: 5,
+      margin: 10,
+      flex: 1,
+      height: 60,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
     },
   });
-
+  NavigationBar.setColor(colorFondo);
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
-      <StatusBar backgroundColor={colorclaro} />
+      <StatusBar backgroundColor={colorStatus} />
       <LinearGradient
         colors={['#7226dd', '#2c0979', '#29064e']}
         style={styles.container}>
@@ -49,6 +82,48 @@ const NewSale = ({navigation}) => {
               color="#FFF"
               size={50}></Icon>
           </TouchableOpacity>
+        </View>
+        <View style={styles.datos}>
+          <View style={styles.botones}>
+            <TouchableOpacity
+              style={styles.boton}
+              onPress={() => {
+                //navigation.goBack(null);
+              }}>
+              <Icon
+                name="barcode"
+                type="font-awesome"
+                color="#FFF"
+                size={40}></Icon>
+              <Text>Escaner</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.boton}
+              onPress={() => {
+                // navigation.goBack(null);
+              }}>
+              <Icon
+                name="search"
+                type="font-awesome"
+                color="#FFF"
+                size={35}></Icon>
+              <Text>Buscar producto</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.botones2}>
+            <TouchableOpacity
+              style={styles.boton}
+              onPress={() => {
+                //navigation.goBack(null);
+              }}>
+              <Icon
+                name="edit"
+                type="font-awesome"
+                color="#FFF"
+                size={40}></Icon>
+              <Text>Producto Extra </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </LinearGradient>
     </SafeAreaView>
