@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 
-const NewSell = ({navigation}) => {
+const NewSale = ({navigation}) => {
   return (
     <SafeAreaView>
       <Text>Hola</Text>
@@ -17,4 +17,4 @@ const NewSell = ({navigation}) => {
   );
 };
 
-export default NewSell;
+export default NewSale;
