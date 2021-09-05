@@ -137,7 +137,7 @@ const Home = ({navigation}) => {
     },
   });
 
-  NavigationBar.setColor('#ffab8e');
+  NavigationBar.setColor('#29064e');
 
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
