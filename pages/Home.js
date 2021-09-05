@@ -21,7 +21,7 @@ const Home = () => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      marginTop: StatusBar.currentHeight,
+
       flexDirection: 'column',
       backgroundColor: colorFondo,
 
@@ -128,7 +128,7 @@ const Home = () => {
   });
 
   return (
-    <SafeAreaView style={{backgroundColor: colorFondo, flex: 1}}>
+    <SafeAreaView style={{backgroundColor: 'red', flex: 1}}>
       <View style={styles.container}>
         <Header></Header>
         <View style={styles.sale}>
