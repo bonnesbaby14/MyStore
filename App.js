@@ -17,6 +17,7 @@ import {
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
+import NewSell from './pages/NewSell';
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NewSell"
+          component={NewSell}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

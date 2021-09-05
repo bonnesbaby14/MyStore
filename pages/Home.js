@@ -16,7 +16,7 @@ import {
 
 // import imageHeader from "../assets/header";
 
-const Home = () => {
+const Home = ({navigation}) => {
   const colorBTN = '#1f2844';
   const colorFondo = '#1A1F2B';
   const colorclaro = '#20045e';
@@ -147,7 +147,7 @@ const Home = () => {
             <TouchableOpacity
               style={styles.saleBtn}
               onPress={() => {
-                alert('Nueva venta');
+                navigation.navigate('NewSell');
               }}>
               <View style={styles.btnNewSale}>
                 <View style={styles.btnNewSaleIcon}>
