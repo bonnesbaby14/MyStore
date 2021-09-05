@@ -15,6 +15,8 @@ import java.util.Arrays;
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
 import com.BV.LinearGradient.LinearGradientPackage; 
+import com.bhavan.RNNavBarColor.RNNavBarColor;
+
 public class MainApplication extends Application implements ReactApplication {
  private final ReactModuleRegistryProvider mModuleRegistryProvider = new ReactModuleRegistryProvider(new BasePackageList().getPackageList(), null);
   private final ReactNativeHost mReactNativeHost =
@@ -34,6 +36,8 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> unimodules = Arrays.<ReactPackage>asList(
             new ModuleRegistryAdapter(mModuleRegistryProvider),
             new LinearGradientPackage()
+     
+
           );
           packages.addAll(unimodules);
           return packages;

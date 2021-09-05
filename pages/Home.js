@@ -1,8 +1,9 @@
 import {StatusBar, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Icon} from 'react-native-elements';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
+import NavigationBar from 'react-native-navbar-color';
 
 import {
   StyleSheet,
@@ -135,6 +136,8 @@ const Home = ({navigation}) => {
       alignItems: 'flex-start',
     },
   });
+
+  NavigationBar.setColor('#ffab8e');
 
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>

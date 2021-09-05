@@ -185,6 +185,7 @@ dependencies {
     implementation project(':react-native-linear-gradient')
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    compile project(':react-native-navbar-color')
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     addUnimodulesDependencies()
