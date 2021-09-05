@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import {Icon} from 'react-native-elements';
 function Header() {
-  const color = '#0810C5';
+  const color = '#20045e';
   const styles = StyleSheet.create({
     header: {
       flex: 1.5,
@@ -74,7 +74,7 @@ function Header() {
       </View>
       <View style={styles.sells}>
         <Icon name="dollar" type="font-awesome" color="#FFF" size={25}></Icon>
-        <Text style={styles.headerSells}> $121.40</Text>
+        <Text style={styles.headerSells}> 121.40</Text>
       </View>
     </View>
   );

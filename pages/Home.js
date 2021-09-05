@@ -2,6 +2,7 @@ import {StatusBar, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Icon} from 'react-native-elements';
 import Header from '../components/Header';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {
   StyleSheet,
@@ -16,9 +17,10 @@ import {
 // import imageHeader from "../assets/header";
 
 const Home = () => {
-  const colorBTN = '#1B202F';
+  const colorBTN = '#1f2844';
   const colorFondo = '#1A1F2B';
-  const colorclaro = '#0810C5';
+  const colorclaro = '#20045e';
+  const colorBorder = '#262cbd';
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -34,7 +36,7 @@ const Home = () => {
     botones: {
       flex: 5,
       flexDirection: 'column',
-      backgroundColor: colorFondo,
+
       borderTopLeftRadius: 50,
       borderTopRightRadius: 50,
     },
@@ -51,7 +53,7 @@ const Home = () => {
     },
     saleBtn: {
       borderLeftWidth: 10,
-      borderColor: '#0810C5',
+      borderColor: colorBorder,
 
       margin: 10,
       backgroundColor: colorBTN,
@@ -106,7 +108,7 @@ const Home = () => {
     },
     salesBtn: {
       borderBottomWidth: 10,
-      borderColor: '#0810C5',
+      borderColor: colorBorder,
       margin: 10,
       backgroundColor: colorBTN,
       width: '80%',
@@ -135,10 +137,12 @@ const Home = () => {
   });
 
   return (
-    <SafeAreaView style={{backgroundColor: 'gold', flex: 1}}>
+    <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
       <View style={styles.container}>
         <Header></Header>
-        <View style={styles.botones}>
+        <LinearGradient
+          colors={['#7226dd', '#2c0979', '#29064e']}
+          style={styles.botones}>
           <View style={styles.sale}>
             <TouchableOpacity
               style={styles.saleBtn}
@@ -220,7 +224,7 @@ const Home = () => {
               </TouchableOpacity>
             </View>
           </View>
-        </View>
+        </LinearGradient>
       </View>
     </SafeAreaView>
   );
