@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Arrays;
 import org.unimodules.adapters.react.ModuleRegistryAdapter;
 import org.unimodules.adapters.react.ReactModuleRegistryProvider;
+import com.BV.LinearGradient.LinearGradientPackage; 
 public class MainApplication extends Application implements ReactApplication {
  private final ReactModuleRegistryProvider mModuleRegistryProvider = new ReactModuleRegistryProvider(new BasePackageList().getPackageList(), null);
   private final ReactNativeHost mReactNativeHost =
@@ -31,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
            // Add unimodules
           List<ReactPackage> unimodules = Arrays.<ReactPackage>asList(
-            new ModuleRegistryAdapter(mModuleRegistryProvider)
+            new ModuleRegistryAdapter(mModuleRegistryProvider),
+            new LinearGradientPackage()
           );
           packages.addAll(unimodules);
           return packages;
