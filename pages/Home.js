@@ -18,25 +18,33 @@ import {
 const Home = () => {
   const colorBTN = '#1B202F';
   const colorFondo = '#1A1F2B';
+  const colorclaro = '#0810C5';
   const styles = StyleSheet.create({
     container: {
       flex: 1,
 
       flexDirection: 'column',
-      backgroundColor: colorFondo,
 
       justifyContent: 'center',
+      backgroundColor: colorclaro,
+      borderTopLeftRadius: 60,
+      borderTopRightRadius: 60,
     },
 
+    botones: {
+      flex: 5,
+      flexDirection: 'column',
+      backgroundColor: colorFondo,
+      borderTopLeftRadius: 50,
+      borderTopRightRadius: 50,
+    },
     rowOne: {
       flex: 3,
-      backgroundColor: 'red',
+
       flexDirection: 'row',
     },
     sale: {
       flex: 2,
-
-      backgroundColor: colorFondo,
 
       justifyContent: 'flex-end',
       alignItems: 'center',
@@ -93,7 +101,6 @@ const Home = () => {
     },
     sales: {
       flex: 1,
-      backgroundColor: colorFondo,
       justifyContent: 'flex-start',
       alignItems: 'flex-end',
     },
@@ -121,87 +128,97 @@ const Home = () => {
     },
     admin: {
       flex: 1,
-      backgroundColor: colorFondo,
+
       justifyContent: 'flex-start',
       alignItems: 'flex-start',
     },
   });
 
   return (
-    <SafeAreaView style={{backgroundColor: 'red', flex: 1}}>
+    <SafeAreaView style={{backgroundColor: 'gold', flex: 1}}>
       <View style={styles.container}>
         <Header></Header>
-        <View style={styles.sale}>
-          <TouchableOpacity
-            style={styles.saleBtn}
-            onPress={() => {
-              alert('Nueva venta');
-            }}>
-            <View style={styles.btnNewSale}>
-              <View style={styles.btnNewSaleIcon}>
-                <Icon
-                  name="shopping-cart"
-                  type="font-awesome"
-                  color="#FFF"
-                  size={80}></Icon>
-              </View>
-
-              <View style={styles.btnNewSaleText}>
-                <Text
-                  style={{textAlign: 'center', fontSize: 25, color: '#FFF'}}>
-                  Nueva venta
-                </Text>
-              </View>
-            </View>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.rowOne}>
-          <View style={styles.sales}>
+        <View style={styles.botones}>
+          <View style={styles.sale}>
             <TouchableOpacity
-              style={styles.salesBtn}
+              style={styles.saleBtn}
               onPress={() => {
-                alert('ss');
+                alert('Nueva venta');
               }}>
-              <View>
-                <View>
+              <View style={styles.btnNewSale}>
+                <View style={styles.btnNewSaleIcon}>
                   <Icon
-                    name="history"
+                    name="shopping-cart"
                     type="font-awesome"
                     color="#FFF"
                     size={80}></Icon>
                 </View>
-                <View>
+
+                <View style={styles.btnNewSaleText}>
                   <Text
                     style={{textAlign: 'center', fontSize: 25, color: '#FFF'}}>
-                    Historial
+                    Nueva venta
                   </Text>
                 </View>
               </View>
             </TouchableOpacity>
           </View>
-          <View style={styles.admin}>
-            <TouchableOpacity
-              style={styles.salesBtn}
-              onPress={() => {
-                alert('ss');
-              }}>
-              <View style={styles.btnAdmin}>
+
+          <View style={styles.rowOne}>
+            <View style={styles.sales}>
+              <TouchableOpacity
+                style={styles.salesBtn}
+                onPress={() => {
+                  alert('ss');
+                }}>
                 <View>
-                  <Icon
-                    name="tasks"
-                    type="font-awesome"
-                    color="#FFF"
-                    size={80}></Icon>
+                  <View>
+                    <Icon
+                      name="history"
+                      type="font-awesome"
+                      color="#FFF"
+                      size={80}></Icon>
+                  </View>
+                  <View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        fontSize: 25,
+                        color: '#FFF',
+                      }}>
+                      Historial
+                    </Text>
+                  </View>
                 </View>
-                <View>
-                  <Text
-                    style={{textAlign: 'center', fontSize: 25, color: '#FFF'}}>
-                    Administar
-                  </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.admin}>
+              <TouchableOpacity
+                style={styles.salesBtn}
+                onPress={() => {
+                  alert('ss');
+                }}>
+                <View style={styles.btnAdmin}>
+                  <View>
+                    <Icon
+                      name="tasks"
+                      type="font-awesome"
+                      color="#FFF"
+                      size={80}></Icon>
+                  </View>
+                  <View>
+                    <Text
+                      style={{
+                        textAlign: 'center',
+                        fontSize: 25,
+                        color: '#FFF',
+                      }}>
+                      Administar
+                    </Text>
+                  </View>
                 </View>
-              </View>
-            </TouchableOpacity>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </View>
