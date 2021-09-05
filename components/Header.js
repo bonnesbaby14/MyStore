@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Touchable,
+} from 'react-native';
 import {Icon} from 'react-native-elements';
 function Header() {
   const color = '#0810C5';
@@ -30,6 +36,7 @@ function Header() {
 
     welcome: {
       flex: 1,
+      margin: 25,
     },
     welcomeText: {
       fontSize: 35,
@@ -41,8 +48,11 @@ function Header() {
     sells: {
       flexDirection: 'row',
       flex: 1,
-
+      margin: 15,
       alignItems: 'flex-end',
+    },
+    settings: {
+      margin: 20,
     },
   });
   return (
@@ -51,6 +61,15 @@ function Header() {
         <View style={styles.welcome}>
           <Text style={styles.welcomeText}> Bienvenido</Text>
           <Text style={styles.welcomeUser}>Usuario</Text>
+        </View>
+        <View style={styles.settings}>
+          <TouchableOpacity>
+            <Icon
+              name="sliders"
+              type="font-awesome"
+              color="#FFF"
+              size={30}></Icon>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.sells}>
