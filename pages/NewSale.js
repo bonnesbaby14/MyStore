@@ -9,6 +9,7 @@ import {
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
@@ -61,6 +62,22 @@ const NewSale = ({navigation}) => {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-evenly',
+    },
+    ventas: {
+      flex: 7,
+      margin: 30,
+    },
+    total: {
+      margin: 30,
+      marginBottom: 1,
+      marginTop: 1,
+      flex: 1,
+      flexDirection: 'column',
+    },
+    subTotal: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop: 5,
     },
   });
   NavigationBar.setColor(colorFondo);
@@ -123,6 +140,58 @@ const NewSale = ({navigation}) => {
                 size={40}></Icon>
               <Text>Producto Extra </Text>
             </TouchableOpacity>
+          </View>
+
+          <ScrollView style={styles.ventas}>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+            <Text>ddd</Text>
+          </ScrollView>
+          <View style={styles.total}>
+            <View style={styles.subTotal}>
+              <Text>SubTotal:</Text>
+              <Text>$0.00</Text>
+            </View>
+            <View style={styles.subTotal}>
+              <Text>Total:</Text>
+              <Text>$0.00</Text>
+            </View>
           </View>
         </View>
       </LinearGradient>
