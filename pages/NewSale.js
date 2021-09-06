@@ -10,6 +10,7 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
+  TextInput,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
@@ -19,6 +20,7 @@ const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
   const colorFondo = '#1A1F2B';
   const colorBTN = '#1f2844';
+  const colorInput = '#535865';
 
   const colorStatus = '#7226dd';
 
@@ -37,7 +39,7 @@ const NewSale = ({navigation}) => {
       marginLeft: 10,
     },
     datos: {
-      flex: 10,
+      flex: 12,
       backgroundColor: colorFondo,
       borderTopLeftRadius: 50,
       borderTopRightRadius: 50,
@@ -64,20 +66,42 @@ const NewSale = ({navigation}) => {
       justifyContent: 'space-evenly',
     },
     ventas: {
-      flex: 7,
+      flex: 10,
       margin: 30,
     },
     total: {
       margin: 30,
       marginBottom: 1,
       marginTop: 1,
-      flex: 1,
+      flex: 0.7,
       flexDirection: 'column',
     },
     subTotal: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginTop: 5,
+    },
+    botones3: {
+      margin: 20,
+      marginTop: 0,
+      marginBottom: 0,
+      flexDirection: 'row',
+    },
+    botones4: {
+      margin: 20,
+      marginTop: 0,
+      marginBottom: 0,
+      flexDirection: 'row',
+    },
+    input: {
+      backgroundColor: colorInput,
+      borderRadius: 5,
+      margin: 10,
+      flex: 1,
+      height: 60,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
     },
   });
   NavigationBar.setColor(colorFondo);
@@ -146,42 +170,6 @@ const NewSale = ({navigation}) => {
             <Text>ddd</Text>
             <Text>ddd</Text>
             <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
           </ScrollView>
           <View style={styles.total}>
             <View style={styles.subTotal}>
@@ -192,6 +180,40 @@ const NewSale = ({navigation}) => {
               <Text>Total:</Text>
               <Text>$0.00</Text>
             </View>
+          </View>
+          <View style={styles.botones4}>
+            <TextInput
+              style={styles.input}
+              keyboardType="numeric"
+              placeholder={'122.0'}
+              value={122.0}></TextInput>
+            <TouchableOpacity
+              style={styles.boton}
+              onPress={() => {
+                // navigation.goBack(null);
+              }}>
+              <Icon
+                name="hourglass-start"
+                type="font-awesome"
+                color="#FFF"
+                size={25}></Icon>
+              <Text>Venta Pendiente</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.botones3}>
+            <TouchableOpacity
+              style={styles.boton}
+              onPress={() => {
+                //navigation.goBack(null);
+              }}>
+              <Icon
+                name="check"
+                type="font-awesome"
+                color="#FFF"
+                size={40}></Icon>
+              <Text>Finalizar venta </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </LinearGradient>
