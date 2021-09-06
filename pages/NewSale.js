@@ -15,6 +15,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
+import Item from '../components/Item';
 
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
@@ -167,9 +168,11 @@ const NewSale = ({navigation}) => {
           </View>
 
           <ScrollView style={styles.ventas}>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
-            <Text>ddd</Text>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
+            <Item></Item>
           </ScrollView>
           <View style={styles.total}>
             <View style={styles.subTotal}>
