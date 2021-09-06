@@ -55,6 +55,7 @@ const NewSale = ({navigation}) => {
       margin: 20,
       marginTop: 0,
       flexDirection: 'row',
+      marginBottom: 0,
     },
     boton: {
       backgroundColor: colorBTN,
@@ -67,14 +68,15 @@ const NewSale = ({navigation}) => {
       justifyContent: 'space-evenly',
     },
     ventas: {
-      flex: 10,
+      flex: 11,
       margin: 30,
+      marginTop: 10,
     },
     total: {
       margin: 30,
       marginBottom: 1,
       marginTop: 1,
-      flex: 0.7,
+
       flexDirection: 'column',
     },
     subTotal: {
@@ -125,6 +127,7 @@ const NewSale = ({navigation}) => {
               size={50}></Icon>
           </TouchableOpacity>
         </View>
+
         <View style={styles.datos}>
           <View style={styles.botones}>
             <TouchableOpacity
@@ -168,6 +171,8 @@ const NewSale = ({navigation}) => {
           </View>
 
           <ScrollView style={styles.ventas}>
+            <Item></Item>
+            <Item></Item>
             <Item></Item>
             <Item></Item>
             <Item></Item>
