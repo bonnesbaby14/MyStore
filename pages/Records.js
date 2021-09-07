@@ -37,6 +37,13 @@ const Records = ({navigation}) => {
       alignItems: 'center',
       marginLeft: 10,
     },
+    datos: {
+      flex: 12,
+      backgroundColor: colorFondo,
+      borderTopLeftRadius: 50,
+      borderTopRightRadius: 50,
+      flexDirection: 'column',
+    },
   });
 
   return (
@@ -58,6 +65,7 @@ const Records = ({navigation}) => {
               size={50}></Icon>
           </TouchableOpacity>
         </View>
+        <View style={styles.datos}></View>
       </LinearGradient>
     </SafeAreaView>
   );

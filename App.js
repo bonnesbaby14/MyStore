@@ -18,7 +18,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import NewSale from './pages/NewSale';
-import Records from './pages/records';
+import Records from './pages/Records';
 
 function App() {
   return (

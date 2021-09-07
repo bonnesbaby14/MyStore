@@ -193,7 +193,7 @@ const NewSale = ({navigation}) => {
             <TextInput
               style={styles.input}
               keyboardType="numeric"
-              placeholder={'122.0'}
+              placeholder="123.09"
               value={122.0}></TextInput>
             <TouchableOpacity
               style={styles.boton}
