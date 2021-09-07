@@ -177,7 +177,7 @@ const Home = ({navigation}) => {
               <TouchableOpacity
                 style={styles.salesBtn}
                 onPress={() => {
-                  alert('ss');
+                  navigation.navigate('Records');
                 }}>
                 <View>
                   <View>

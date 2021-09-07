@@ -15,16 +15,29 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
-import Item from '../components/Item';
 
-const Records = () => {
+const Records = ({navigation}) => {
   const colorclaro = '#20045e';
   const colorFondo = '#1A1F2B';
   const colorBTN = '#1f2844';
   const colorInput = '#535865';
 
   const colorStatus = '#7226dd';
-  NavigationBar.setColor('#29064e');
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: 'column',
+    },
+    topbar: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+    },
+    back: {
+      alignItems: 'center',
+      marginLeft: 10,
+    },
+  });
 
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>

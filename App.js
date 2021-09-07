@@ -18,6 +18,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import NewSale from './pages/NewSale';
+import Records from './pages/records';
 
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
         <Stack.Screen
           name="NewSale"
           component={NewSale}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Records"
+          component={Records}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
