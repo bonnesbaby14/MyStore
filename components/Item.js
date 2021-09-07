@@ -45,6 +45,7 @@ const Item = () => {
       alignContent: 'center',
       justifyContent: 'center', //Centered horizontally
       alignItems: 'center',
+      justifyContent: 'center',
     },
     boton: {flex: 1, justifyContent: 'center', margin: 1},
   });
