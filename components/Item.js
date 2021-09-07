@@ -56,6 +56,7 @@ const Item = () => {
       </View>
       <View style={styles.descripcion}>
         <Text>Descripcion del producto</Text>
+        <Text>$12.23</Text>
       </View>
       <View style={styles.many}>
         <View style={styles.addItem}>
@@ -73,7 +74,7 @@ const Item = () => {
           <View style={styles.input}>
             <TextInput
               keyboardType="numeric"
-              value={1}
+              value={'1'}
               placeholder={'1'}></TextInput>
           </View>
           <TouchableOpacity
