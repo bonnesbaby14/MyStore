@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -11,19 +11,27 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
+  Modal,
+  Pressable,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
 import Item from '../components/Item';
+import {Input} from 'react-native-elements/dist/input/Input';
 
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
   const colorFondo = '#1A1F2B';
   const colorBTN = '#1f2844';
   const colorInput = '#535865';
-
   const colorStatus = '#7226dd';
+
+  const [modal, setmodal] = useState(false);
+
+  const handleExtra = () => {
+    setmodal(true);
+  };
 
   const styles = StyleSheet.create({
     container: {
@@ -106,11 +114,81 @@ const NewSale = ({navigation}) => {
       alignItems: 'center',
       justifyContent: 'space-evenly',
     },
+
+    containerModal: {
+      flex: 1,
+      backgroundColor: 'rgba(8,7,7,.8)',
+
+      borderRadius: 15,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    content: {
+      flexDirection: 'column',
+      flex: 0.7,
+
+      width: '85%',
+      backgroundColor: 'rgba(36,22,50,0.8);',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 10,
+    },
+    titulo: {
+      fontSize: 30,
+      width: '80%',
+      textAlign: 'center',
+      marginBottom: 25,
+      borderBottomColor: 'white',
+      borderBottomWidth: 2,
+    },
+    canpre: {
+      flexDirection: 'row',
+    },
+    cantidad: {
+      flex: 1,
+    },
+    precio: {
+      flex: 1,
+    },
   });
   NavigationBar.setColor(colorFondo);
+
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
       <StatusBar backgroundColor={colorStatus} />
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modal}
+        onRequestClose={() => {
+          setmodal(false);
+        }}>
+        <View style={styles.containerModal}>
+          <View style={styles.content}>
+            <Text style={styles.titulo}>Producto Extra</Text>
+            <Text>Producto</Text>
+            <Input placeholder="Pesos Varios"></Input>
+            <View style={styles.canpre}>
+              <View style={styles.cantidad}>
+                <Text>Cantidad</Text>
+                <Input placeholder="1.0"></Input>
+              </View>
+
+              <View style={styles.precio}>
+                <Text>Precio </Text>
+                <Input placeholder="1.00"></Input>
+              </View>
+            </View>
+
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setmodal(false)}>
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
       <LinearGradient
         colors={['#7226dd', '#2c0979', '#29064e']}
         style={styles.container}>
@@ -156,11 +234,7 @@ const NewSale = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View style={styles.botones2}>
-            <TouchableOpacity
-              style={styles.boton}
-              onPress={() => {
-                //navigation.goBack(null);
-              }}>
+            <TouchableOpacity style={styles.boton} onPress={handleExtra}>
               <Icon
                 name="edit"
                 type="font-awesome"

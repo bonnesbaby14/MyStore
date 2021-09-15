@@ -25,16 +25,17 @@ const Item = () => {
     descripcion: {flex: 3, justifyContent: 'center', alignContent: 'center'},
     image: {flex: 1, justifyContent: 'center', alignContent: 'center'},
     many: {
-      flex: 1.3,
+      flex: 1.5,
 
       justifyContent: 'center',
       alignContent: 'center',
     },
     addItem: {
       flexDirection: 'row',
+      marginEnd: 5,
     },
     input: {
-      flex: 1,
+      flex: 2,
       backgroundColor: '#282E3D',
       height: '80%',
       borderWidth: 1,
@@ -75,7 +76,7 @@ const Item = () => {
           <View style={styles.input}>
             <TextInput
               keyboardType="numeric"
-              value={'1'}
+              value={1}
               placeholder={'1'}></TextInput>
           </View>
           <TouchableOpacity
