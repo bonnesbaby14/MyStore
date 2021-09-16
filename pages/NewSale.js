@@ -10,7 +10,6 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
-  TextInput,
   Modal,
   Pressable,
 } from 'react-native';
@@ -19,6 +18,8 @@ import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
 import Item from '../components/Item';
 import {Input} from 'react-native-elements/dist/input/Input';
+import {TextInput} from 'react-native-paper';
+import {FloatingLabelInput} from 'react-native-floating-label-input';
 
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
@@ -129,18 +130,16 @@ const NewSale = ({navigation}) => {
       flex: 0.7,
 
       width: '85%',
-      backgroundColor: 'rgba(36,22,50,0.8);',
+      backgroundColor: 'rgba(36,22,50,0.8)',
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: 10,
     },
-    titulo: {
-      fontSize: 30,
-      width: '80%',
-      textAlign: 'center',
-      marginBottom: 25,
-      borderBottomColor: 'white',
-      borderBottomWidth: 2,
+    productoExtra1: {
+      width: '95%',
+    },
+    inputExtra: {
+      height: 50,
     },
     canpre: {
       flexDirection: 'row',
@@ -150,6 +149,14 @@ const NewSale = ({navigation}) => {
     },
     precio: {
       flex: 1,
+    },
+    titulo: {
+      fontSize: 30,
+      width: '80%',
+      textAlign: 'center',
+      marginBottom: 25,
+      borderBottomColor: 'white',
+      borderBottomWidth: 2,
     },
   });
   NavigationBar.setColor(colorFondo);
@@ -167,20 +174,52 @@ const NewSale = ({navigation}) => {
         <View style={styles.containerModal}>
           <View style={styles.content}>
             <Text style={styles.titulo}>Producto Extra</Text>
-            <Text>Producto</Text>
-            <Input placeholder="Pesos Varios"></Input>
+            <View style={styles.productoExtra1}>
+              <FloatingLabelInput
+                label="Phone"
+                staticLabel
+                hintTextColor={'#FFF'}
+                containerStyles={{
+                  borderWidth: 2,
+                  paddingHorizontal: 10,
+                  backgroundColor: '#fff',
+                  borderColor: 'gold',
+                  borderRadius: 8,
+                }}
+                customLabelStyles={{
+                  colorFocused: '#FFF',
+                  fontSizeFocused: 12,
+                }}
+                labelStyles={{
+                  backgroundColor: '#FFF',
+                  paddingHorizontal: 5,
+                }}
+                inputStyles={{
+                  color: 'white',
+                  paddingHorizontal: 10,
+                }}
+                onChangeText={value => {}}
+              />
+            </View>
             <View style={styles.canpre}>
               <View style={styles.cantidad}>
-                <Text>Cantidad</Text>
-                <Input placeholder="1.0"></Input>
+                <TextInput
+                  style={styles.inputExtra}
+                  label="Cantidad"
+                  mode="outlined"
+                  placeholder="1.00"
+                />
               </View>
 
               <View style={styles.precio}>
-                <Text>Precio </Text>
-                <Input placeholder="1.00"></Input>
+                <TextInput
+                  style={styles.inputExtra}
+                  label="Precio"
+                  mode="outlined"
+                  placeholder="1.00"
+                />
               </View>
             </View>
-
             <Pressable
               style={[styles.button, styles.buttonClose]}
               onPress={() => setmodal(false)}>
