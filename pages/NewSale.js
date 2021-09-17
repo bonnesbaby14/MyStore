@@ -12,14 +12,15 @@ import {
   ScrollView,
   Modal,
   Pressable,
+  TextInput,
 } from 'react-native';
+
 import LinearGradient from 'react-native-linear-gradient';
 import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
+
 import Item from '../components/Item';
-import {Input} from 'react-native-elements/dist/input/Input';
-import {TextInput} from 'react-native-paper';
-import {FloatingLabelInput} from 'react-native-floating-label-input';
+import ExtraProduct from '../components/ExtraProduct';
 
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
@@ -115,119 +116,13 @@ const NewSale = ({navigation}) => {
       alignItems: 'center',
       justifyContent: 'space-evenly',
     },
-
-    containerModal: {
-      flex: 1,
-      backgroundColor: 'rgba(8,7,7,.8)',
-
-      borderRadius: 15,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-
-    content: {
-      flexDirection: 'column',
-      flex: 0.7,
-
-      width: '85%',
-      backgroundColor: 'rgba(36,22,50,0.8)',
-      alignItems: 'center',
-      justifyContent: 'center',
-      borderRadius: 10,
-    },
-    productoExtra1: {
-      width: '95%',
-    },
-    inputExtra: {
-      height: 50,
-    },
-    canpre: {
-      flexDirection: 'row',
-    },
-    cantidad: {
-      flex: 1,
-    },
-    precio: {
-      flex: 1,
-    },
-    titulo: {
-      fontSize: 30,
-      width: '80%',
-      textAlign: 'center',
-      marginBottom: 25,
-      borderBottomColor: 'white',
-      borderBottomWidth: 2,
-    },
   });
   NavigationBar.setColor(colorFondo);
 
   return (
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
       <StatusBar backgroundColor={colorStatus} />
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modal}
-        onRequestClose={() => {
-          setmodal(false);
-        }}>
-        <View style={styles.containerModal}>
-          <View style={styles.content}>
-            <Text style={styles.titulo}>Producto Extra</Text>
-            <View style={styles.productoExtra1}>
-              <FloatingLabelInput
-                label="Phone"
-                staticLabel
-                hintTextColor={'#FFF'}
-                containerStyles={{
-                  borderWidth: 2,
-                  paddingHorizontal: 10,
-                  backgroundColor: '#fff',
-                  borderColor: 'gold',
-                  borderRadius: 8,
-                }}
-                customLabelStyles={{
-                  colorFocused: '#FFF',
-                  fontSizeFocused: 12,
-                }}
-                labelStyles={{
-                  backgroundColor: '#FFF',
-                  paddingHorizontal: 5,
-                }}
-                inputStyles={{
-                  color: 'white',
-                  paddingHorizontal: 10,
-                }}
-                onChangeText={value => {}}
-              />
-            </View>
-            <View style={styles.canpre}>
-              <View style={styles.cantidad}>
-                <TextInput
-                  style={styles.inputExtra}
-                  label="Cantidad"
-                  mode="outlined"
-                  placeholder="1.00"
-                />
-              </View>
-
-              <View style={styles.precio}>
-                <TextInput
-                  style={styles.inputExtra}
-                  label="Precio"
-                  mode="outlined"
-                  placeholder="1.00"
-                />
-              </View>
-            </View>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setmodal(false)}>
-              <Text style={styles.textStyle}>Hide Modal</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
+      <ExtraProduct estado={modal} setEstado={setmodal} />
       <LinearGradient
         colors={['#7226dd', '#2c0979', '#29064e']}
         style={styles.container}>
