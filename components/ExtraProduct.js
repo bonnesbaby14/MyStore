@@ -16,6 +16,10 @@ import {
 import {FloatingLabelInput} from 'react-native-floating-label-input';
 
 const ExtraProduct = ({estado, setEstado}) => {
+  const [precio, setPrecio] = useState('');
+  const [cantidad, setCantidad] = useState('');
+  const [nombre, setNombre] = useState('');
+
   const styles = StyleSheet.create({
     containerModal: {
       flex: 1,
@@ -91,6 +95,7 @@ const ExtraProduct = ({estado, setEstado}) => {
           <View style={styles.productoExtra1}>
             <FloatingLabelInput
               label="Nombre"
+              value={nombre}
               placeholder="Pesos varios"
               staticLabel
               hintTextColor={'#FFF'}
@@ -113,15 +118,18 @@ const ExtraProduct = ({estado, setEstado}) => {
                 color: 'white',
                 paddingHorizontal: 10,
               }}
-              onChangeText={() => {}}
+              onChangeText={value => {
+                setNombre(value);
+              }}
             />
           </View>
           <View style={styles.canpre}>
             <View style={styles.cantidad}>
               <FloatingLabelInput
                 label="Cantidad"
-                placeholder="Pesos varios"
                 staticLabel
+                keyboardType="numeric"
+                value={cantidad}
                 hintTextColor={'#FFF'}
                 containerStyles={{
                   borderWidth: 1,
@@ -142,7 +150,9 @@ const ExtraProduct = ({estado, setEstado}) => {
                   color: 'white',
                   paddingHorizontal: 10,
                 }}
-                onChangeText={() => {}}
+                onChangeText={value => {
+                  setCantidad(value);
+                }}
               />
             </View>
 
@@ -152,6 +162,11 @@ const ExtraProduct = ({estado, setEstado}) => {
                 placeholder="Pesos varios"
                 staticLabel
                 hintTextColor={'#FFF'}
+                value={precio}
+                maskType="currency"
+                currencyDivider="."
+                mask="$ 1111"
+                keyboardType="numeric"
                 containerStyles={{
                   borderWidth: 1,
                   paddingHorizontal: 10,
@@ -171,7 +186,9 @@ const ExtraProduct = ({estado, setEstado}) => {
                   color: 'white',
                   paddingHorizontal: 10,
                 }}
-                onChangeText={() => {}}
+                onChangeText={value => {
+                  setPrecio(value);
+                }}
               />
             </View>
           </View>
