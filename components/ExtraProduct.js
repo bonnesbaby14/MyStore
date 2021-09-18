@@ -66,6 +66,7 @@ const ExtraProduct = ({estado, setEstado}) => {
       marginBottom: 25,
       borderBottomColor: 'white',
       borderBottomWidth: 2,
+      color: '#FFF',
     },
     botonesModal: {
       backgroundColor: 'transparent',
@@ -76,8 +77,9 @@ const ExtraProduct = ({estado, setEstado}) => {
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-evenly',
-      borderColor: '#C0B7CF',
-      borderWidth: 2,
+      borderColor: '#FFF',
+      borderWidth: 1,
+      color: '#FFF',
     },
   });
 
@@ -103,16 +105,20 @@ const ExtraProduct = ({estado, setEstado}) => {
                 borderWidth: 1,
                 paddingHorizontal: 10,
                 backgroundColor: 'rgba(36,22,50,0.4)',
-                borderColor: '#C0B7CF',
+                borderColor: '#FFF',
                 borderRadius: 8,
+                color: '#FFF',
               }}
               customLabelStyles={{
                 colorFocused: '#FFF',
+                colorBlurred: '#FFF',
                 fontSizeFocused: 12,
+                color: '#FFF',
               }}
               labelStyles={{
-                backgroundColor: '#FFF',
+                backgroundColor: 'rgba(36,22,50,0.9)',
                 paddingHorizontal: 5,
+                color: '#FFF',
               }}
               inputStyles={{
                 color: 'white',
@@ -135,15 +141,16 @@ const ExtraProduct = ({estado, setEstado}) => {
                   borderWidth: 1,
                   paddingHorizontal: 10,
                   backgroundColor: 'rgba(36,22,50,0.4)',
-                  borderColor: '#C0B7CF',
+                  borderColor: '#FFF',
                   borderRadius: 8,
                 }}
                 customLabelStyles={{
                   colorFocused: '#FFF',
+                  colorBlurred: '#FFF',
                   fontSizeFocused: 12,
                 }}
                 labelStyles={{
-                  backgroundColor: '#FFF',
+                  backgroundColor: 'rgba(36,22,50,0.9)',
                   paddingHorizontal: 5,
                 }}
                 inputStyles={{
@@ -171,15 +178,17 @@ const ExtraProduct = ({estado, setEstado}) => {
                   borderWidth: 1,
                   paddingHorizontal: 10,
                   backgroundColor: 'rgba(36,22,50,0.4)',
-                  borderColor: '#C0B7CF',
+                  borderColor: '#FFF',
                   borderRadius: 8,
                 }}
                 customLabelStyles={{
                   colorFocused: '#FFF',
+                  colorBlurred: '#FFF',
                   fontSizeFocused: 12,
+                  color: '#FFF',
                 }}
                 labelStyles={{
-                  backgroundColor: '#FFF',
+                  backgroundColor: 'rgba(36,22,50,0.9)',
                   paddingHorizontal: 5,
                 }}
                 inputStyles={{
@@ -194,12 +203,12 @@ const ExtraProduct = ({estado, setEstado}) => {
           </View>
           <View>
             <TouchableOpacity style={styles.botonesModal}>
-              <Text>Agregar</Text>
+              <Text style={{color: '#FFF'}}>Agregar</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.botonesModal}
               onPress={() => setEstado(false)}>
-              <Text>Cancelar</Text>
+              <Text style={{color: '#FFF'}}>Cancelar</Text>
             </TouchableOpacity>
           </View>
         </View>
