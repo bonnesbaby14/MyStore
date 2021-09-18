@@ -85,7 +85,9 @@ const Search = ({navigation}) => {
 
         <View style={styles.datos}>
           <View style={styles.busqueda}>
-            <TextInput style={{flex: 8}}></TextInput>
+            <TextInput
+              style={{flex: 8}}
+              placeholder="    Buscar..."></TextInput>
             <Icon
               style={{flex: 2, margin: 10}}
               name="search"

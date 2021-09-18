@@ -43,6 +43,7 @@ const NewSale = ({navigation}) => {
     topbar: {
       flex: 1,
       flexDirection: 'row',
+
       justifyContent: 'flex-start',
     },
     back: {
@@ -54,6 +55,7 @@ const NewSale = ({navigation}) => {
       backgroundColor: colorFondo,
       borderTopLeftRadius: 50,
       borderTopRightRadius: 50,
+      color: '#FFF',
       flexDirection: 'column',
     },
     botones: {
@@ -70,6 +72,7 @@ const NewSale = ({navigation}) => {
     boton: {
       backgroundColor: colorBTN,
       borderRadius: 5,
+      color: '#FFF',
       margin: 10,
       flex: 1,
       height: 60,
@@ -81,6 +84,7 @@ const NewSale = ({navigation}) => {
       flex: 11,
       margin: 30,
       marginTop: 10,
+      color: '#FFF',
     },
     total: {
       margin: 30,
@@ -93,6 +97,7 @@ const NewSale = ({navigation}) => {
       flexDirection: 'row',
       justifyContent: 'space-between',
       marginTop: 5,
+      color: '#FFF',
     },
     botones3: {
       margin: 20,
@@ -114,6 +119,7 @@ const NewSale = ({navigation}) => {
       height: 60,
       flexDirection: 'row',
       alignItems: 'center',
+      color: '#FFF',
       justifyContent: 'space-evenly',
     },
   });
@@ -152,7 +158,7 @@ const NewSale = ({navigation}) => {
                 type="font-awesome"
                 color="#FFF"
                 size={40}></Icon>
-              <Text>Escaner</Text>
+              <Text style={{color: '#FFF'}}> Escaner</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.boton}
@@ -164,7 +170,7 @@ const NewSale = ({navigation}) => {
                 type="font-awesome"
                 color="#FFF"
                 size={35}></Icon>
-              <Text>Buscar producto</Text>
+              <Text style={{color: '#FFF'}}>Buscar producto</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.botones2}>
@@ -174,7 +180,7 @@ const NewSale = ({navigation}) => {
                 type="font-awesome"
                 color="#FFF"
                 size={40}></Icon>
-              <Text>Producto Extra </Text>
+              <Text style={{color: '#FFF'}}>Producto Extra </Text>
             </TouchableOpacity>
           </View>
 
@@ -189,12 +195,12 @@ const NewSale = ({navigation}) => {
           </ScrollView>
           <View style={styles.total}>
             <View style={styles.subTotal}>
-              <Text>SubTotal:</Text>
-              <Text>$0.00</Text>
+              <Text style={{color: '#FFF'}}>SubTotal:</Text>
+              <Text style={{color: '#FFF'}}>$0.00</Text>
             </View>
             <View style={styles.subTotal}>
-              <Text>Total:</Text>
-              <Text>$0.00</Text>
+              <Text style={{color: '#FFF'}}>Total:</Text>
+              <Text style={{color: '#FFF'}}>$0.00</Text>
             </View>
           </View>
           <View style={styles.botones4}>
@@ -213,7 +219,7 @@ const NewSale = ({navigation}) => {
                 type="font-awesome"
                 color="#FFF"
                 size={25}></Icon>
-              <Text>Venta Pendiente</Text>
+              <Text style={{color: '#FFF'}}>Venta Pendiente</Text>
             </TouchableOpacity>
           </View>
 
@@ -228,7 +234,7 @@ const NewSale = ({navigation}) => {
                 type="font-awesome"
                 color="#FFF"
                 size={40}></Icon>
-              <Text>Finalizar venta </Text>
+              <Text style={{color: '#FFF'}}>Finalizar venta </Text>
             </TouchableOpacity>
           </View>
         </View>
