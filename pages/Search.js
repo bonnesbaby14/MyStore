@@ -59,6 +59,9 @@ const Search = ({navigation}) => {
       borderColor: '#FFF',
       borderWidth: 1,
     },
+    lista: {
+      width: '90%',
+    },
   });
   NavigationBar.setColor(colorFondo);
 
@@ -94,6 +97,127 @@ const Search = ({navigation}) => {
               type="font-awesome"
               color="#FFF"
               size={20}></Icon>
+          </View>
+          <View style={styles.lista}>
+            <ScrollView>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+              <Text
+                style={{
+                  color: 'white',
+                  backgroundColor: 'gold',
+                  padding: 20,
+                  margin: 5,
+                }}>
+                Hola
+              </Text>
+            </ScrollView>
           </View>
         </View>
       </LinearGradient>
