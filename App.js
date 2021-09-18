@@ -19,6 +19,7 @@ import {
 } from 'react-native';
 import NewSale from './pages/NewSale';
 import Records from './pages/Records';
+import Search from './pages/Search';
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
         <Stack.Screen
           name="Records"
           component={Records}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

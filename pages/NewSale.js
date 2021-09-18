@@ -157,7 +157,7 @@ const NewSale = ({navigation}) => {
             <TouchableOpacity
               style={styles.boton}
               onPress={() => {
-                // navigation.goBack(null);
+                navigation.navigate('Search');
               }}>
               <Icon
                 name="search"
