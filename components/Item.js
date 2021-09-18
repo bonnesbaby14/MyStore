@@ -57,8 +57,8 @@ const Item = () => {
         <Icon name="image" type="font-awesome" color="#FFF" size={50}></Icon>
       </View>
       <View style={styles.descripcion}>
-        <Text>Descripcion del producto</Text>
-        <Text>$12.23</Text>
+        <Text style={{color: '#FFF'}}>Descripcion del producto</Text>
+        <Text style={{color: '#FFF'}}>$12.23</Text>
       </View>
       <View style={styles.many}>
         <View style={styles.addItem}>
