@@ -18,6 +18,7 @@ import NavigationBar from 'react-native-navbar-color';
 import {Icon} from 'react-native-elements';
 
 import {FloatingLabelInput} from 'react-native-floating-label-input';
+import ItemSearch from '../components/ItemSearch';
 
 const Search = ({navigation}) => {
   const colorclaro = '#20045e';
@@ -99,124 +100,16 @@ const Search = ({navigation}) => {
               size={20}></Icon>
           </View>
           <View style={styles.lista}>
-            <ScrollView>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
-              <Text
-                style={{
-                  color: 'white',
-                  backgroundColor: 'gold',
-                  padding: 20,
-                  margin: 5,
-                }}>
-                Hola
-              </Text>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
+              <ItemSearch></ItemSearch>
             </ScrollView>
           </View>
         </View>

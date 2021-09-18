@@ -184,7 +184,9 @@ const NewSale = ({navigation}) => {
             </TouchableOpacity>
           </View>
 
-          <ScrollView style={styles.ventas}>
+          <ScrollView
+            style={styles.ventas}
+            showsVerticalScrollIndicator={false}>
             <Item></Item>
             <Item></Item>
             <Item></Item>
