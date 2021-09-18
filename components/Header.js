@@ -40,10 +40,12 @@ function Header() {
     },
     welcomeText: {
       fontSize: 35,
+      color: '#FFF',
     },
     welcomeUser: {
       fontSize: 25,
       marginLeft: 150,
+      color: '#FFF',
     },
     sells: {
       flexDirection: 'row',
@@ -74,7 +76,7 @@ function Header() {
       </View>
       <View style={styles.sells}>
         <Icon name="dollar" type="font-awesome" color="#FFF" size={25}></Icon>
-        <Text style={styles.headerSells}> 121.40</Text>
+        <Text style={{color: '#FFF'}}> 121.40</Text>
       </View>
     </View>
   );
