@@ -21,6 +21,7 @@ import {Icon} from 'react-native-elements';
 
 import Item from '../components/Item';
 import ExtraProduct from '../components/ExtraProduct';
+import Scanner from '../components/Scanner';
 
 const NewSale = ({navigation}) => {
   const colorclaro = '#20045e';
@@ -30,11 +31,14 @@ const NewSale = ({navigation}) => {
   const colorStatus = '#7226dd';
 
   const [modal, setmodal] = useState(false);
+  const [scanner, setscanner] = useState(false);
 
   const handleExtra = () => {
     setmodal(true);
   };
-
+  const handleScanner = () => {
+    setscanner(true);
+  };
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -129,6 +133,7 @@ const NewSale = ({navigation}) => {
     <SafeAreaView style={{backgroundColor: colorclaro, flex: 1}}>
       <StatusBar backgroundColor={colorStatus} />
       <ExtraProduct estado={modal} setEstado={setmodal} />
+      <Scanner estado={scanner} setEstado={setscanner} />
       <LinearGradient
         colors={['#7226dd', '#2c0979', '#29064e']}
         style={styles.container}>
@@ -148,11 +153,7 @@ const NewSale = ({navigation}) => {
 
         <View style={styles.datos}>
           <View style={styles.botones}>
-            <TouchableOpacity
-              style={styles.boton}
-              onPress={() => {
-                //navigation.goBack(null);
-              }}>
+            <TouchableOpacity style={styles.boton} onPress={handleScanner}>
               <Icon
                 name="barcode"
                 type="font-awesome"
