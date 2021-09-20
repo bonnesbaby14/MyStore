@@ -23,6 +23,7 @@ import {Camera} from 'expo-camera';
 const Scanner = ({estado, setEstado}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
+  const [flash, setflash] = useState(false);
   const colorItem = '#21293C';
 
   useEffect(() => {
@@ -136,12 +137,31 @@ const Scanner = ({estado, setEstado}) => {
             ) : (
               <Camera
                 onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-                flashMode="torch"
+                flashMode={flash ? 'torch' : 'off'}
                 autoFocus="on"
                 style={{
-                  height: '90%',
+                  height: '100%',
                   width: '100%',
-                }}></Camera>
+                }}>
+                <View
+                  style={{
+                    flex: 1,
+                    justifyContent: 'flex-end',
+                    alignItems: 'flex-end',
+                  }}>
+                  <TouchableOpacity
+                    style={{margin: 20}}
+                    onPress={() => {
+                      setflash(!flash);
+                    }}>
+                    <Icon
+                      name="bolt"
+                      type="font-awesome"
+                      color={flash ? 'grey' : '#FFF'}
+                      size={40}></Icon>
+                  </TouchableOpacity>
+                </View>
+              </Camera>
 
               // <BarCodeScanner
               //   BarCodeSize={{width: 10, height: 50}}
