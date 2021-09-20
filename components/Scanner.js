@@ -16,10 +16,13 @@ import {
 } from 'react-native';
 import {FloatingLabelInput} from 'react-native-floating-label-input';
 import {BarCodeScanner} from 'expo-barcode-scanner';
+import ItemSearch from './ItemSearch';
+import {Icon} from 'react-native-elements';
 
 const Scanner = ({estado, setEstado}) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
+  const colorItem = '#21293C';
 
   useEffect(() => {
     (async () => {
@@ -59,19 +62,21 @@ const Scanner = ({estado, setEstado}) => {
       borderRadius: 10,
     },
     camera: {
-      backgroundColor: 'gold',
       flex: 4,
       width: '100%',
+      justifyContent: 'center',
     },
 
     preview: {
-      backgroundColor: 'green',
+      flexDirection: 'row',
       flex: 2,
       width: '100%',
+      justifyContent: 'center',
+      alignContent: 'center',
+      alignItems: 'center',
     },
 
     botones: {
-      backgroundColor: 'blue',
       flex: 1,
       width: '100%',
       flexDirection: 'row',
@@ -79,10 +84,11 @@ const Scanner = ({estado, setEstado}) => {
 
     add: {
       flex: 1,
-      backgroundColor: 'purple',
+      justifyContent: 'center',
+      flexDirection: 'row',
     },
 
-    accept: {flex: 1, backgroundColor: 'orange'},
+    accept: {flex: 1, justifyContent: 'center', flexDirection: 'row'},
     botonesModal: {
       backgroundColor: 'transparent',
       borderRadius: 5,
@@ -96,6 +102,18 @@ const Scanner = ({estado, setEstado}) => {
       borderColor: '#FFF',
       borderWidth: 1,
       color: '#FFF',
+    },
+    containerPreview: {
+      flex: 1,
+      height: 120,
+      backgroundColor: 'rgba(36,22,50,.5)',
+      borderRadius: 10,
+      flexDirection: 'row',
+      marginTop: 0,
+      //   borderWidth: 1,
+      //   borderColor: 'rgba(255,255,255,.5)',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
   });
 
@@ -116,14 +134,38 @@ const Scanner = ({estado, setEstado}) => {
               <Text>No access to camera</Text>
             ) : (
               <BarCodeScanner
+                BarCodeSize={{width: 10, height: 50}}
+                onTouchEndCapture={false}
                 onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-                style={{flex: 1, width: '100%'}}
+                style={{
+                  height: '90%',
+                  width: '100%',
+                }}
               />
             )}
           </View>
-          <View style={styles.preview}></View>
+          <View style={styles.preview}>
+            <View style={styles.containerPreview}>
+              <Icon
+                name="image"
+                type="font-awesome"
+                color="#FFF"
+                size={50}
+                style={{margin: 18}}></Icon>
+              <Text style={{color: '#FFF', margin: 8}}>
+                Nombre del producto
+              </Text>
+              <Text style={{color: '#FFF', margin: 8}}>$123.32</Text>
+            </View>
+          </View>
           <View style={styles.botones}>
-            <View style={styles.add}></View>
+            <View style={styles.add}>
+              <TouchableOpacity
+                style={styles.botonesModal}
+                onPress={() => setEstado(false)}>
+                <Text style={{color: '#FFF'}}>Agregar</Text>
+              </TouchableOpacity>
+            </View>
             <View style={styles.accept}>
               <TouchableOpacity
                 style={styles.botonesModal}
