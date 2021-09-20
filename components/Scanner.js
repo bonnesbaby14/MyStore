@@ -95,7 +95,7 @@ const Scanner = ({estado, setEstado}) => {
       margin: 10,
       flex: 1,
       width: '90%',
-      height: 45,
+      height: 55,
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-evenly',
@@ -170,7 +170,7 @@ const Scanner = ({estado, setEstado}) => {
               <TouchableOpacity
                 style={styles.botonesModal}
                 onPress={() => setEstado(false)}>
-                <Text style={{color: '#FFF'}}>Aceptar</Text>
+                <Text style={{color: '#FFF'}}>Listo</Text>
               </TouchableOpacity>
             </View>
           </View>
