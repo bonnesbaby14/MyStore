@@ -18,6 +18,7 @@ import {FloatingLabelInput} from 'react-native-floating-label-input';
 import {BarCodeScanner} from 'expo-barcode-scanner';
 import ItemSearch from './ItemSearch';
 import {Icon} from 'react-native-elements';
+import {Camera} from 'expo-camera';
 
 const Scanner = ({estado, setEstado}) => {
   const [hasPermission, setHasPermission] = useState(null);
@@ -133,15 +134,24 @@ const Scanner = ({estado, setEstado}) => {
             ) : hasPermission === false ? (
               <Text>No access to camera</Text>
             ) : (
-              <BarCodeScanner
-                BarCodeSize={{width: 10, height: 50}}
-                onTouchEndCapture={false}
+              <Camera
                 onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                flashMode="torch"
+                autoFocus="on"
                 style={{
                   height: '90%',
                   width: '100%',
-                }}
-              />
+                }}></Camera>
+
+              // <BarCodeScanner
+              //   BarCodeSize={{width: 10, height: 50}}
+              //   onTouchEndCapture={false}
+              //   onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+              //   style={{
+              //     height: '90%',
+              //     width: '100%',
+              //   }}
+              // />
             )}
           </View>
           <View style={styles.preview}>
