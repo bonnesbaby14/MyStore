@@ -60,7 +60,11 @@ const Home = ({navigation}) => {
       backgroundColor: colorBTN,
       width: '85%',
       height: '60%',
-      borderRadius: 10,
+      borderTopLeftRadius: 30,
+      borderBottomRightRadius: 30,
+
+      borderTopRightRadius: 10,
+
       justifyContent: 'center',
       alignContent: 'center',
       shadowColor: '#000',
@@ -114,7 +118,10 @@ const Home = ({navigation}) => {
       backgroundColor: colorBTN,
       width: '80%',
       height: '85%',
-      borderRadius: 10,
+      borderTopLeftRadius: 10,
+      borderBottomRightRadius: 10,
+
+      borderTopRightRadius: 30,
       justifyContent: 'center',
       alignContent: 'center',
       shadowColor: '#000',
