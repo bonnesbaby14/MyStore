@@ -20,6 +20,7 @@ import {
 import NewSale from './pages/NewSale';
 import Records from './pages/Records';
 import Search from './pages/Search';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
         <Stack.Screen
           name="Search"
           component={Search}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Admin"
+          component={Admin}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

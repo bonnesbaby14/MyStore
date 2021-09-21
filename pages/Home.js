@@ -204,7 +204,7 @@ const Home = ({navigation}) => {
               <TouchableOpacity
                 style={styles.salesBtn}
                 onPress={() => {
-                  alert('ss');
+                  navigation.navigate('Admin');
                 }}>
                 <View style={styles.btnAdmin}>
                   <View>
